@@ -13,7 +13,7 @@ namespace cookbook
 		{
 			InitializeComponent();
 
-			MainPage = new cookbook.MainPage();
+			MainPage = new MainPage();
 		}
 
 		protected override void OnStart ()

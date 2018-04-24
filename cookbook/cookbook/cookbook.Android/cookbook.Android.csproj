@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{15AAC4BF-1B46-42A3-A124-EE965E79FC51}</ProjectGuid>
+    <ProjectGuid>{4B9CC752-92B8-45B0-B108-1528B70688AA}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>cookbook.Droid</RootNamespace>
     <AssemblyName>cookbook.Android</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="25.4.0.2" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="25.4.0.2" />
@@ -84,7 +84,10 @@
       <Project>{f1ca22cd-0cf7-43a9-96f1-93005b6ffc8d}</Project>
       <Name>SpoonacularAPI.PCL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\cookbook\cookbook.csproj">
+      <Project>{2C4F35EC-2C5B-4EC4-B984-8B2393ED9043}</Project>
+      <Name>cookbook</Name>
+    </ProjectReference>
   </ItemGroup>
-  <Import Project="..\cookbook\cookbook.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
