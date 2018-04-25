@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Rest.Model
 {
-    public enum TotalDailyUnit { Empty, G, Kcal, Mg, Μg };
+    //public enum TotalDailyUnit { Empty, G, Kcal, Mg, Μg };
 
     public partial class Total
     {
@@ -16,8 +16,5 @@ namespace Rest.Model
 
         [JsonProperty("quantity")]
         public double Quantity { get; set; }
-
-        [JsonProperty("unit")]
-        public TotalDailyUnit Unit { get; set; }
     }
 }

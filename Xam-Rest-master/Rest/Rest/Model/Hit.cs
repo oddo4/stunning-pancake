@@ -12,10 +12,10 @@ namespace Rest.Model
         [JsonProperty("recipe")]
         public Recipe Recipe { get; set; }
 
-        [JsonProperty("bookmarked")]
-        public bool Bookmarked { get; set; }
+        //[JsonProperty("bookmarked")]
+        //public bool Bookmarked { get; set; }
 
-        [JsonProperty("bought")]
-        public bool Bought { get; set; }
+        //[JsonProperty("bought")]
+        //public bool Bought { get; set; }
     }
 }

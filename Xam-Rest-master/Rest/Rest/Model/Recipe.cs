@@ -24,9 +24,6 @@ namespace Rest.Model
         [JsonProperty("url")]
         public string Url { get; set; }
 
-        [JsonProperty("shareAs")]
-        public string ShareAs { get; set; }
-
         [JsonProperty("yield")]
         public long Yield { get; set; }
 
