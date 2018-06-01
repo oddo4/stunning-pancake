@@ -46,6 +46,7 @@
     <Compile Include="Model\Ingredient.cs" />
     <Compile Include="Model\Params.cs" />
     <Compile Include="Model\Recipe.cs" />
+    <Compile Include="Model\RecipeSearchAPI.cs" />
     <Compile Include="Model\Total.cs" />
     <Compile Include="Model\Welcome.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
