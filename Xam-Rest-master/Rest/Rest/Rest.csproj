@@ -48,7 +48,7 @@
     <Compile Include="Model\Recipe.cs" />
     <Compile Include="Model\RecipeSearchAPI.cs" />
     <Compile Include="Model\Total.cs" />
-    <Compile Include="Model\Welcome.cs" />
+    <Compile Include="Model\SearchAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

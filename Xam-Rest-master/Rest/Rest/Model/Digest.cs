@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Rest.Model
 {
-    public enum DigestUnit { G, Mg, Μg };
+    //public enum DigestUnit { G, Mg, Μg };
 
     public partial class Digest
     {
@@ -16,9 +16,6 @@ namespace Rest.Model
 
         [JsonProperty("tag")]
         public string Tag { get; set; }
-
-        [JsonProperty("schemaOrgTag")]
-        public string SchemaOrgTag { get; set; }
 
         [JsonProperty("total")]
         public double Total { get; set; }
@@ -29,10 +26,8 @@ namespace Rest.Model
         [JsonProperty("daily")]
         public double Daily { get; set; }
 
-        [JsonProperty("unit")]
-        public DigestUnit Unit { get; set; }
-
         [JsonProperty("sub", NullValueHandling = NullValueHandling.Ignore)]
         public Digest[] Sub { get; set; }
     }
+
 }
