@@ -153,7 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rest\Rest.csproj">
-      <Project>{bc5af759-a0b2-4d13-b1f6-417e96532da3}</Project>
+      <Project>{41E09BFD-4D3C-41D4-9CD3-D562186B04C5}</Project>
       <Name>Rest</Name>
     </ProjectReference>
   </ItemGroup>

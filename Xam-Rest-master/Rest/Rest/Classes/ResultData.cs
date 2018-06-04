@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Rest.Model
 {
-    public partial class SearchAPI
+    public partial class ResultData
     {
         [JsonProperty("q")]
         public string Q { get; set; }

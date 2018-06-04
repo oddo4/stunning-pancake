@@ -5,6 +5,7 @@
     "NETStandard.Library": "2.0.1",
     "Newtonsoft.Json": "10.0.3",
     "System.Net.Http": "4.3.3",
+    "ThriveGmbH.BottomNavigationBar.XF": "1.0.2",
     "Xamarin.Forms": "2.4.0.280"
   },
   "frameworks": {

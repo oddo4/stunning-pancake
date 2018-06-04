@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BottomBar.XamarinForms;
+using Rest.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +15,36 @@ namespace Rest
         {
             InitializeComponent();
 
-            MainPage = new Rest.MainPage();
+            //MainPage = new Rest.MainPage();
+
+            BottomBarPage bottomBarPage = new BottomBarPage();
+            bottomBarPage.FixedMode = true;
+
+            string[] tabTitles = { "Home", "Search", "Categories", "Favorites", "Profile" };
+            Page[] tabPages = { new HomePage(), new SearchPage(), new CategoryPage(), new FavoritePage(), new ProfilePage() };
+
+            for (int i = 0; i < tabTitles.Length; ++i)
+            {
+                string title = tabTitles[i];
+
+                FileImageSource icon = (FileImageSource)FileImageSource.FromFile(string.Format("ic_action_{0}.png", title.ToLowerInvariant()));
+
+                // create tab page
+                var tabPage = new NavigationPage(tabPages[i]);
+                tabPage.Title = title;
+                tabPage.Icon = icon;
+
+                // set tab color
+                /*if (tabColor != null)
+                {
+                    BottomBarPageExtensions.SetTabColor(tabPage, Color.FromHex(tabColor));
+                }*/
+
+                // add tab pag to tab control
+                bottomBarPage.Children.Add(tabPage);
+            }
+
+            MainPage = bottomBarPage;
         }
 
         protected override void OnStart()

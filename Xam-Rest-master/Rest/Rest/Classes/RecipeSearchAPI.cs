@@ -20,9 +20,9 @@ namespace Rest.Model
         /// <param name="json">Json string of Posts</param>
         /// <returns>Collection of parsed objects</returns>
         /// <exception cref="HttpRequestException">If device could not connect ie. Internet access denied or Status code is not Success</exception>
-        public async Task<Welcome> ParsePostJsonTask(string json)
+        public async Task<ResultData> ParsePostJsonTask(string json)
         {
-            return await Task.Run(() => JsonConvert.DeserializeObject<Welcome>(json));
+            return await Task.Run(() => JsonConvert.DeserializeObject<ResultData>(json));
 
         }
 
@@ -41,7 +41,7 @@ namespace Rest.Model
         public async Task<string> GetPostsJsonTask(string query)
         {
             var client = new HttpClient();
-            var uri = new Uri("https://api.edamam.com/search?q=" + query + "&app_id=" + apiID + "&app_key=" + apiKey + "&from=0&to=3");
+            var uri = new Uri("https://api.edamam.com/search?q=" + query + "&app_id=" + apiID + "&app_key=" + apiKey + "&from=0&to=100");
 
             string content = await Task.Run(async () =>
             {

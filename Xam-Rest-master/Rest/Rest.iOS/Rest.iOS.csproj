@@ -117,6 +117,9 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="BottomBar.XamarinForms, Version=1.0.6334.21543, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ThriveGmbH.BottomNavigationBar.XF.1.0.2\lib\Xamarin.iOS10\BottomBar.XamarinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Ideine.ModernHttpClient.3.0.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
@@ -145,7 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rest\Rest.csproj">
-      <Project>{bc5af759-a0b2-4d13-b1f6-417e96532da3}</Project>
+      <Project>{41E09BFD-4D3C-41D4-9CD3-D562186B04C5}</Project>
       <Name>Rest</Name>
     </ProjectReference>
   </ItemGroup>
