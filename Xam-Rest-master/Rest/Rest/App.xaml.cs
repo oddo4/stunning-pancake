@@ -18,7 +18,8 @@ namespace Rest
             //MainPage = new Rest.MainPage();
 
             BottomBarPage bottomBarPage = new BottomBarPage();
-            bottomBarPage.FixedMode = true;
+            bottomBarPage.BarTheme = BottomBarPage.BarThemeTypes.DarkWithAlpha;
+            //bottomBarPage.FixedMode = true;
 
             string[] tabTitles = { "Home", "Search", "Categories", "Favorites", "Profile" };
             Page[] tabPages = { new HomePage(), new SearchPage(), new CategoryPage(), new FavoritePage(), new ProfilePage() };
@@ -39,6 +40,9 @@ namespace Rest
                 {
                     BottomBarPageExtensions.SetTabColor(tabPage, Color.FromHex(tabColor));
                 }*/
+
+                //BottomBarPageExtensions.SetTabColor(tabPage, Color.White);
+
 
                 // add tab pag to tab control
                 bottomBarPage.Children.Add(tabPage);
