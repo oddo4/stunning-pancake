@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="Rest.Pages.RecipePage"
+             Title="{Binding Recipe.Label}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand" HeightRequest="200">
+                    <Image Source="{Binding Recipe.Image}" />
+                    <BoxView Style="{StaticResource SeparatorLine}" Margin="0"/>
+                </StackLayout>
+                <StackLayout>
+                    <StackLayout Margin="10,0" BackgroundColor="Blue">
+                        <Label Style="{StaticResource LabelHeader}" Text="Ingredients"/>
+                        <flv:FlowListView FlowColumnCount="1" FlowItemsSource="{Binding Recipe.Ingredients}" SeparatorColor="Black" SeparatorVisibility="Default" BackgroundColor="Red">
+                            <!--FlowLastTappedItem="{Binding SelectedItem}" HasUnevenRows="True" FlowItemTappedCommand="{Binding SelectItemCommand}"-->
+                            <flv:FlowListView.FlowColumnTemplate>
+                                <DataTemplate>
+                                    <Label Text="{Binding Text}"/>
+                                </DataTemplate>
+                            </flv:FlowListView.FlowColumnTemplate>
+                        </flv:FlowListView>
+                    </StackLayout>
+                    <StackLayout Margin="10,0" BackgroundColor="Green">
+                        <Label Style="{StaticResource LabelHeader}" Text="Recipe"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

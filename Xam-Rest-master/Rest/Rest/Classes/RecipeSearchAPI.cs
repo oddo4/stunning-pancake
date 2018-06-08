@@ -33,6 +33,7 @@ namespace Rest.Model
         //Recipe Search API
         //API ID = df168dd4
         //API KEY = a7d32a938a697834f1248f5973c4705c
+        //https://api.edamam.com/search?q=chicken&app_id=df168dd4&app_key=a7d32a938a697834f1248f5973c4705c&from=0&to=10
 
         /// <summary>
         /// Download data from API via background Task
@@ -41,7 +42,7 @@ namespace Rest.Model
         public async Task<string> GetPostsJsonTask(string query)
         {
             var client = new HttpClient();
-            var uri = new Uri("https://api.edamam.com/search?q=" + query + "&app_id=" + apiID + "&app_key=" + apiKey + "&from=0&to=100");
+            var uri = new Uri("https://api.edamam.com/search?q=" + query + "&app_id=" + apiID + "&app_key=" + apiKey + "&from=0&to=10");
 
             string content = await Task.Run(async () =>
             {

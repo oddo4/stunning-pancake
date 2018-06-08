@@ -1,4 +1,5 @@
 ﻿using BottomBar.XamarinForms;
+using DLToolkit.Forms.Controls;
 using Rest.Pages;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace Rest
         public App()
         {
             InitializeComponent();
+            FlowListView.Init();
 
             //MainPage = new Rest.MainPage();
 
