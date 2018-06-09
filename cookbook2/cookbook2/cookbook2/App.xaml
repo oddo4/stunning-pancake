@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cookbook2.App">
+	<Application.Resources>
+		<!-- Application resource dictionary -->
+        <!-- Primary Color = 13d43f-->
+        <ResourceDictionary>
+            <Style x:Key="LabelHeader" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style x:Key="SeparatorLine" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="2"/>
+                <Setter Property="BackgroundColor" Value="#13d43f"/>
+                <Setter Property="TranslationY" Value="-6"/>
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="Padding" Value="0"/>
+            </Style>
+            <Style x:Key="LabelLink" TargetType="Label">
+                <Setter Property="TextColor" Value="Blue"/>
+            </Style>
+            <Style x:Key="SearchBar" TargetType="SearchBar">
+                <Setter Property="CancelButtonColor" Value="#13d43f"/>
+            </Style>
+        </ResourceDictionary>        
+	</Application.Resources>
+</Application>

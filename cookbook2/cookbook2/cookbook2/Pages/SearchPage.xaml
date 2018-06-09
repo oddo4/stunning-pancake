@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="cookbook2.Pages.SearchPage"
+             Title="Search">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <SearchBar x:Name="SearchBar" Style="{StaticResource SearchBar}" SearchCommand="{Binding SearchCommand}" SearchCommandParameter="{Binding Source={x:Reference SearchBar},Path=Text}"/>
+                <BoxView Style="{StaticResource SeparatorLine}" TranslationY="6"/>
+            </StackLayout>
+            <ActivityIndicator IsRunning="{Binding Busy}" IsVisible="{Binding Busy}" HeightRequest="40" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TranslationY="40">
+                <ActivityIndicator.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="100" Android="100" WinPhone="400" />
+                </ActivityIndicator.WidthRequest>
+                <ActivityIndicator.Color>
+                    <OnPlatform x:TypeArguments="Color" iOS="#13d43f" Android="#13d43f" WinPhone="#13d43f" />
+                </ActivityIndicator.Color>
+            </ActivityIndicator>
+            <flv:FlowListView FlowColumnCount="2" FlowItemsSource="{Binding ListResults}" FlowLastTappedItem="{Binding SelectedItem}" HasUnevenRows="True" FlowItemTappedCommand="{Binding SelectItemCommand}">
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Grid HeightRequest="200">
+                            <Image Source="{Binding Recipe.Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
+                            <StackLayout BackgroundColor="White" VerticalOptions="EndAndExpand" TranslationY="6" Opacity="0.9">
+                                <Label Text="{Binding Recipe.Label}" FontSize="16" Margin="5,0,5,5"/>
+                                <BoxView Style="{StaticResource SeparatorLine}"/>
+                            </StackLayout>
+                            
+                        </Grid>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+            </flv:FlowListView>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

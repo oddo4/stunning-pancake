@@ -1,11 +1,11 @@
 ﻿{
   "dependencies": {
     "DLToolkit.Forms.Controls.FlowListView": "2.0.10",
-    "Ideine.ModernHttpClient": "3.0.2",
+    "Ideine.ModernHttpClient": "3.2.2",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
     "MvvmLightLibs": "5.4.1",
     "NETStandard.Library": "2.0.1",
-    "Newtonsoft.Json": "10.0.3",
+    "Newtonsoft.Json": "11.0.2",
     "System.Net.Http": "4.3.3",
     "ThriveGmbH.BottomNavigationBar.XF": "1.0.2",
     "Xamarin.Forms": "3.0.0.550146"

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="cookbook2.Pages.HomePage"
+             Title="Featured">
+    <ContentPage.Content>
+        <StackLayout>
+            <flv:FlowListView FlowColumnCount="2" FlowItemsSource="{Binding ListResults}" FlowLastTappedItem="{Binding SelectedItem}" HasUnevenRows="True" FlowItemTappedCommand="{Binding SelectItemCommand}">
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <StackLayout HeightRequest="200">
+                            <Image Source="{Binding Recipe.Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
+                            <Label Text="{Binding Recipe.Label}" Margin="5,0,5,5" FontSize="16"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+            </flv:FlowListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

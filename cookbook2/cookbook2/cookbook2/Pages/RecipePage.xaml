@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="cookbook2.Pages.RecipePage"
+             Title="{Binding Recipe.Label}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <Image Source="{Binding Recipe.Image}" HorizontalOptions="FillAndExpand" Aspect="AspectFill" HeightRequest="200"/>
+                    <BoxView Style="{StaticResource SeparatorLine}"/>
+                </StackLayout>
+                <StackLayout Margin="0,0,0,20">
+                    <StackLayout>
+                    </StackLayout>
+                    <StackLayout Margin="10,0">
+                        <Label Style="{StaticResource LabelHeader}" Text="Ingredients"/>
+                        <StackLayout>
+                            <flv:FlowListView FlowColumnCount="1" HeightRequest="{Binding ListViewHeight}" FlowItemsSource="{Binding Recipe.Ingredients}" SeparatorVisibility="Default" SeparatorColor="Gray" Margin="10,0" HasUnevenRows="True">
+                                <flv:FlowListView.FlowColumnTemplate>
+                                    <DataTemplate>
+                                        <RelativeLayout Margin="0,5" HeightRequest="40">
+                                            <Label Text="{Binding Text}"/>
+                                        </RelativeLayout>
+                                    </DataTemplate>
+                                </flv:FlowListView.FlowColumnTemplate>
+                            </flv:FlowListView>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Margin="10,0">
+                        <Label Style="{StaticResource LabelHeader}" Text="Recipe"/>
+                        <Label Margin="10,0" Style="{StaticResource LabelLink}" Text="Recipe available on website" FontAttributes="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding WebViewCommand}" CommandParameter="{Binding Recipe.Url}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
